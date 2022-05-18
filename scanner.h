@@ -2,6 +2,9 @@
 #ifndef SCANNER_H
 #define SCANNER_H
 
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
 #include "token.h"
 
 int grabColumn(char);

@@ -1,8 +1,18 @@
 /*
-	main function for driving project. Three different invocation methods as stated in README
+*** Author: Brett Bax
+*** Assignment: Project 2
+*** Class: CS4280
+***
+*** main.cpp is the main driver for Project 2.
 */
 
-#include "scanner.h"
+#include <fstream>
+#include <iostream>
+
+#include "parser.h"
+#include "makeTree.h"
+
+using namespace std;
 
 int main(int argc, char *argv[]) {
 	
@@ -39,7 +49,10 @@ int main(int argc, char *argv[]) {
 	}
 	cout << "\nOpening file stream...\n\n";
 	inFile.open(file.c_str());
-	testScanner(inFile);
+
+	node *parseTree = parser(inFile);
+
+	treeMaker(parseTree);
 
 	
 	inFile.close();

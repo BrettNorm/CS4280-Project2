@@ -1,0 +1,8 @@
+## p2g3 ##
+declare x := whole ;
+main
+{
+declare y := whole ;
+assign y = 5 ;
+yell y ;
+}
